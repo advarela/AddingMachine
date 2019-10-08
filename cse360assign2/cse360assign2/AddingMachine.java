@@ -8,7 +8,10 @@ public class AddingMachine {
 	//This AddingMachine will create addition and subtraction 
 	//calculations and return the total. 
 	
-
+	public static void main(String Args[]) {
+		
+	}
+	
 	private int total;
 	
 	public AddingMachine () {
@@ -16,15 +19,15 @@ public class AddingMachine {
 	}
 	 
 	public int getTotal () {
-		return 0;	
+		return total;	
 	}
 	
 	public void add (int value) {
-		
+		value = value + total; 
 	}
 	
 	public void subtract (int value) {
-		
+		value = total - value; 
 	}
 		
 	public String toString () {

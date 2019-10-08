@@ -1,6 +1,13 @@
 package cse360assign2;
 
 public class AddingMachine {
+	
+	//Antonio Varela
+	//70641
+	//assignment2
+	//This AddingMachine will create addition and subtraction 
+	//calculations and return the total. 
+	
 
 	private int total;
 	
@@ -9,7 +16,7 @@ public class AddingMachine {
 	}
 	 
 	public int getTotal () {
-		return 0;
+		return 0;	
 	}
 	
 	public void add (int value) {

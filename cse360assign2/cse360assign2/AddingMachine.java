@@ -3,38 +3,76 @@ package cse360assign2;
 public class AddingMachine {
 	
 	//Antonio Varela
-	//70641
+	//Class id: 70641
 	//assignment2
 	//This AddingMachine will create addition and subtraction 
 	//calculations and return the total. 
 	
-	public static void main(String Args[]) {
+	public static void main(String[] args) {
+		System.out.println(getTotal());
+		
+		add(4);
+		
+		System.out.println(getTotal());
+		
+		subtract(2);
+		
+		System.out.println(getTotal());
+		
+		add(5);
+		
+		System.out.println(getTotal());
+		
+		System.out.println(showTransactionHistory());
+		
+		clear();
+		
+		System.out.println(getTotal());
 		
 	}
 	
-	private int total;
+	private static int total;
 	
-	public AddingMachine () {
+	//This will record each transaction
+	private static String transactionHistory;
+	
+	public AddingMachine () 
+	{
 		total = 0;  // not needed - included for clarity
+		
+		transactionHistory = "0";
 	}
 	 
-	public int getTotal () {
+	public static int getTotal () 
+	{
 		return total;	
 	}
 	
-	public void add (int value) {
-		value = value + total; 
+	public static void add (int value) 
+	{
+		
+		total = total + value;
+		
+		transactionHistory = transactionHistory + " + " + value;
 	}
 	
-	public void subtract (int value) {
-		value = total - value; 
+	public static void subtract (int value) 
+	{
+		total = total - value; 
+		
+		transactionHistory = transactionHistory  + " - " + value;
 	}
 		
-	public String toString () {
-		return "";
+	//prints the transactions performed
+	public static String showTransactionHistory () 
+	{
+		return transactionHistory;
 	}
 
-	public void clear() {
-	
+	//resets the variables to its initial state
+	public static void clear() 
+	{
+		total = 0;
+		transactionHistory = "0";
 	}
 }
